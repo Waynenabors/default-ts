@@ -1,6 +1,11 @@
 import React from 'react';
 import './button.css';
 
+type ButtonQuery = {
+  myObject: {
+    label: string;
+  }
+}
 interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
@@ -22,6 +27,10 @@ interface ButtonProps {
    * Optional click handler
    */
   onClick?: () => void;
+  /**
+   * indexed access type
+   */
+  myObject: ButtonQuery['myObject'];
 }
 
 /**
